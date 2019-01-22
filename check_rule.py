@@ -2,8 +2,8 @@ import numberLogManger
 
 def check_number(number):
     if sum(number) < 20 or sum(number) > 200: return False
-    if max(number) <= 20: return False
-    if min(number) >= 20: return False
+    if max(number) <= 15: return False
+    if min(number) >= 15: return False
     counting = 0
     even = 0
     odd = 0
@@ -26,9 +26,7 @@ def check_number(number):
         temp = str(i)
         end_count[int(temp[len(temp)-1])] += 1
         counting2[i//10] += 1
-    if counting > 3 or even > 4 or odd > 4:
-        print('case4')
-        return False
+    if counting > 3 or even > 4 or odd > 4: return False
     gap = list(set(gap))
     if len(gap)==1:
         return False
@@ -36,9 +34,18 @@ def check_number(number):
         return False
     return True
 
-def check_log(number):
+def check_number_and_log(number):
     pre_number = numberLogManger.get_number()
     for i in pre_number:
+        count = 0
+        for j in i:
+            if int(j) in number:
+                count += 1
+            if count > 4:
+                return False
+    return True
+def check_number_and_extraction(number, extraction):
+    for i in extraction:
         count = 0
         for j in i:
             if int(j) in number:
