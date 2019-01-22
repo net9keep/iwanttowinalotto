@@ -1,7 +1,7 @@
 import numberLogManger
 
 def check_number(number):
-    if sum(number) < 20 or sum(number) > 200: return False
+    if sum(number) < 80 or sum(number) > 200: return False
     if max(number) <= 15: return False
     if min(number) >= 15: return False
     counting = 0
