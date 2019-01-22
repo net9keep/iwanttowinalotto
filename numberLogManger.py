@@ -1,5 +1,5 @@
 import csv
-path = "/Users/achaean/Desktop/number_log.csv"
+path = "number_log.csv"
 def read_number_log():
     file = open(path, 'r', encoding='utf-8', newline='')
     file_csv = csv.reader(file)

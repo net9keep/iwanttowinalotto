@@ -1,18 +1,9 @@
 import numberLogManger
 
 def check_number(number):
-    if sum(number) < 20 or sum(number) > 200:
-        print('case1')
-        return False
-
-    if max(number) <= 20:
-        print('case2')
-        return False
-
-    if min(number) >= 20:
-        print('case3')
-        return False
-
+    if sum(number) < 20 or sum(number) > 200: return False
+    if max(number) <= 20: return False
+    if min(number) >= 20: return False
     counting = 0
     even = 0
     odd = 0
